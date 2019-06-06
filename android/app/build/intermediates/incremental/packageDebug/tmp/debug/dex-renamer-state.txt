@@ -1,4 +1,0 @@
-#Thu Jun 06 11:58:08 EEST 2019
-base.0=/Users/bseiryk/projects/boatRanner/android/app/build/intermediates/transforms/dexMerger/debug/0
-renamed.0=classes.dex
-path.0=classes.dex
