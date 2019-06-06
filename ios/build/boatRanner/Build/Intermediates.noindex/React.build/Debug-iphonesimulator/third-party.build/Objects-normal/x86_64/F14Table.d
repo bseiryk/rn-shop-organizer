@@ -1,0 +1,26 @@
+dependencies: \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/container/detail/F14Table.cpp \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/container/detail/F14Table.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/Bits.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/lang/Bits.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/ConstexprMath.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/Portability.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/portability/Config.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/CPortability.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/Utility.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/Traits.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/lang/Assume.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/portability/Builtins.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/Likely.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/ScopeGuard.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/Preprocessor.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/lang/UncaughtExceptions.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/functional/ApplyTuple.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/functional/Invoke.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/lang/Align.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/lang/Exception.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/CppAttributes.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/lang/Launder.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/lang/SafeAssert.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/container/detail/F14Defaults.h \
+  /Users/bseiryk/projects/boatRanner/node_modules/react-native/third-party/folly-2018.10.22.00/folly/container/detail/F14IntrinsicsAvailability.h
