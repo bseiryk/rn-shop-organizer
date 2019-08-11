@@ -5,21 +5,36 @@
 import {AppRegistry} from 'react-native';
 import React, {Component, useReducer} from 'react';
 
-import {Text} from 'react-native';
+import {Text, TouchableHighlight, View} from 'react-native';
 import { Navigation } from "react-native-navigation";
 
 import App from './src/App';
+import ListOfThemes from './src/ListOfThemes';
+import Items from './src/Items';
 import {name as appName} from './app.json';
+import './database';
 
-// AppRegistry.registerComponent(appName, () => App);
-Navigation.registerComponent(`navigation.playground.WelcomeScreen`, () => App);
+Navigation.registerComponent(`List.Of.Themes`, () => ListOfThemes);
+Navigation.registerComponent(`items`, () => Items);
 
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setRoot({
     root: {
-      component: {
-        name: "navigation.playground.WelcomeScreen"
+        stack: {
+          children: [{
+            component: {
+              name: "List.Of.Themes",
+              options: {
+                topBar: {
+                  title: {
+                      text: 'list of groups'
+                  }
+                }
+              }
+            }
+          }]
+        }
       }
-    }
   });
 });
+
