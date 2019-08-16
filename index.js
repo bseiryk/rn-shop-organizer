@@ -14,8 +14,8 @@ import Items from './src/Items';
 import {name as appName} from './app.json';
 import './database';
 
-Navigation.registerComponent(`List.Of.Themes`, () => ListOfThemes);
-Navigation.registerComponent(`items`, () => Items);
+Navigation.registerComponent(`List.Of.Topics`, () => ListOfThemes);
+Navigation.registerComponent(`topic.content`, () => Items);
 
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setRoot({
@@ -23,12 +23,12 @@ Navigation.events().registerAppLaunchedListener(() => {
         stack: {
           children: [{
             component: {
-              name: "List.Of.Themes",
+              name: "List.Of.Topics",
               options: {
                 topBar: {
                   title: {
-                      text: 'list of groups'
-                  }
+                      text: 'Разделы'
+                  },
                 }
               }
             }

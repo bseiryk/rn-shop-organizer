@@ -1,4 +1,4 @@
-#Thu Jun 06 16:15:03 EEST 2019
+#Sun Aug 11 12:46:42 EEST 2019
 base.0=/Users/bseiryk/projects/rn-dictionary/android/app/build/intermediates/transforms/dexMerger/debug/0
 renamed.0=classes.dex
 path.0=classes.dex

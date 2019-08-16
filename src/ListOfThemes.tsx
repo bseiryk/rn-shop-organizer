@@ -1,32 +1,76 @@
 import React, { useEffect, useState } from "react";
+import Icon from "react-native-vector-icons/Ionicons";
+import DialogInput from "react-native-dialog-input";
 
 import { Navigation } from "react-native-navigation";
 
-// doubel tap (se native)
-// swipe
+// refactoring && buld
+
+// design
+// scroll
+// multiple relation delete
 import {
   Text,
   View,
-  TouchableWithoutFeedback,
+  ScrollView,
+  ActivityIndicator,
   TouchableHighlight
 } from "react-native";
-import SwipeWrapper from "./SwipeWrapper";
+import SwipeTopics from "./SwipeTopics";
 import db from "../database";
 
-export default props => {
-  const [topics, setTopics] = useState([]);
+let editTopic = null;
 
-  const onPress = () => {
+export default props => {
+  const [topics, setTopics] = useState(null);
+  const [visible, toggleModal] = useState(false);
+  const [initValueTextInput, setInitValueTextInput] = useState();
+
+  const onEditAddTopic = name => {
+    if (editTopic) {
+      const isOld = topics.find(el => el.name === name);
+      if (!isOld) {
+        db.collection("topics")
+          .doc(editTopic)
+          .update({ name });
+      }
+    } else db.collection("topics").add({ name });
+    toggleModal(false);
+    setInitValueTextInput(undefined);
+  };
+
+  const onDelete = async id => {
+    const deleting = await db
+      .collection("topicsContent")
+      .where("parentId", "==", id)
+      .get();
+    if (deleting.docs.length) {
+      db.collection("topicsContent")
+        .doc(deleting.docs[0].id)
+        .delete();
+    }
+    db.collection("topics")
+      .doc(id)
+      .delete();
+  };
+
+  const onTopicItemLongPress = (id, name) => {
+    setInitValueTextInput(name);
+    toggleModal(true);
+    editTopic = id;
+  };
+
+  const onTopicItemPress = (id, name) => {
     Navigation.push(props.componentId, {
       component: {
-        name: "items",
+        name: "topic.content",
         passProps: {
-          text: "Pushed screen"
+          id
         },
         options: {
           topBar: {
             title: {
-              text: "Itemss"
+              text: name
             }
           }
         }
@@ -34,15 +78,8 @@ export default props => {
     });
   };
 
-  const onDelete = id => {
-    db.collection("topics")
-      .doc(id)
-      .delete();
-  };
-
   useEffect(() => {
     db.collection("topics").onSnapshot(snapshot => {
-      console.log(snapshot);
       const response = [];
       snapshot.docs.forEach(el => {
         response.push({
@@ -54,21 +91,60 @@ export default props => {
     });
   }, []);
 
+  const content = !topics ? (
+    <ActivityIndicator
+      style={{ marginTop: 200 }}
+      size="large"
+      color="#0d1c21"
+    />
+  ) : topics.length ? (
+    topics.map(el => (
+      <SwipeTopics
+        onLongPress={onTopicItemLongPress}
+        onPress={onTopicItemPress}
+        key={el.id}
+        id={el.id}
+        name={el.name}
+        onDelete={onDelete}
+      />
+    ))
+  ) : (
+    <Text style={{ color: "#499eba" }}>Нет Элементов</Text>
+  );
+
   return (
-    <View style={{ backgroundColor: "#000000", height: "100%" }}>
-      <View style={{ flexDirection: "column", alignItems: "center" }}>
-        {topics.map(el => (
-          <SwipeWrapper
-            key={el.id}
-            id={el.id}
-            name={el.name}
-            onDelete={onDelete}
-          />
-        ))}
+    <View
+      style={{
+        justifyContent: "flex-start",
+        backgroundColor: "#1c3247",
+        alignItems: "center",
+        height: "100%"
+      }}
+    >
+      <ScrollView>{content}</ScrollView>
+      <View
+        style={{
+          alignSelf: "flex-end",
+          marginTop: "auto",
+          marginRight: 25,
+          marginBottom: 25
+        }}
+      >
+        <TouchableHighlight onPress={() => toggleModal(true)}>
+          <Icon size={60} name="ios-add-circle-outline" color="#499eba" />
+        </TouchableHighlight>
       </View>
-      <TouchableHighlight onPress={onPress}>
-        <Text>press</Text>
-      </TouchableHighlight>
+      <DialogInput
+        isDialogVisible={visible}
+        title={"Название раздела"}
+        initValueTextInput={initValueTextInput}
+        submitInput={value => onEditAddTopic(value)}
+        closeDialog={() => {
+          toggleModal(false);
+          setInitValueTextInput(undefined);
+          editTopic = null;
+        }}
+      />
     </View>
   );
 };

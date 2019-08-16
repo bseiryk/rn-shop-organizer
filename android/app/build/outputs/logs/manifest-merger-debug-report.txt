@@ -5,6 +5,7 @@ INJECTED from /Users/bseiryk/projects/rn-dictionary/android/app/src/main/Android
 INJECTED from /Users/bseiryk/projects/rn-dictionary/android/app/src/main/AndroidManifest.xml:1:1-26:12
 INJECTED from /Users/bseiryk/projects/rn-dictionary/android/app/src/main/AndroidManifest.xml:1:1-26:12
 MERGED from /Users/bseiryk/projects/rn-dictionary/android/app/src/main/AndroidManifest.xml:1:1-26:12
+MERGED from [:react-native-vector-icons] /Users/bseiryk/projects/rn-dictionary/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-navigation] /Users/bseiryk/projects/rn-dictionary/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative57Debug/AndroidManifest.xml:2:1-17:12
 MERGED from [com.github.wix-playground:ahbottomnavigation:2.4.9] /Users/bseiryk/.gradle/caches/transforms-2/files-2.1/b09a8cc3a2f7ab135a7995d89ddc7171/AndroidManifest.xml:2:1-13:12
 MERGED from [com.android.support:design:26.1.0] /Users/bseiryk/.gradle/caches/transforms-2/files-2.1/b23e31716f8916bce63ee73d0cb7b48b/AndroidManifest.xml:17:1-31:12
@@ -150,6 +151,8 @@ uses-sdk
 INJECTED from /Users/bseiryk/projects/rn-dictionary/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/bseiryk/projects/rn-dictionary/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/bseiryk/projects/rn-dictionary/android/app/src/main/AndroidManifest.xml
+MERGED from [:react-native-vector-icons] /Users/bseiryk/projects/rn-dictionary/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] /Users/bseiryk/projects/rn-dictionary/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-navigation] /Users/bseiryk/projects/rn-dictionary/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative57Debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-navigation] /Users/bseiryk/projects/rn-dictionary/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative57Debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.wix-playground:ahbottomnavigation:2.4.9] /Users/bseiryk/.gradle/caches/transforms-2/files-2.1/b09a8cc3a2f7ab135a7995d89ddc7171/AndroidManifest.xml:7:5-9:41
